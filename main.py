@@ -101,7 +101,7 @@ if __name__ == '__main__':
     else:
         U = sorted_eigenvectors[:, 0:K]  # Eigenvectors are received as columns
         T = (U.transpose() / np.linalg.norm(U, axis=1)).transpose()
-        print(K, N, d)  # REMOVE THIS BEFORE SUBMITTING
+        print(K, N, d)  
         spectral_results = k_means_pp(K, N, K, MAX_ITER, T)
         with open("clusters.txt", "w") as f:
             wr = csv.writer(f)
